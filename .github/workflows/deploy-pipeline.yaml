@@ -59,3 +59,8 @@ jobs:
             body: New release for ${{ github.run_number }}.
             draft: false
             prerelease: false
+      - name: Download Artifact
+        uses: actions/download-artifact@v2
+        with:
+            name: zipped-bundle
+            path: function.zip
